@@ -1,9 +1,9 @@
 'use strict'
 
-const booksTemplate = require('./templates/booklistings.handlebars')
+const booksTemplate = require('./templates/booklisting.handlebars')
 
 const showBooks = function (data) {
-  const booksHtml = booksTemplate({ handlebars: data.books })
+  const booksHtml = booksTemplate({ books: data.books })
   $('#content').val(booksHtml)
 }
 

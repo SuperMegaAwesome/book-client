@@ -5,8 +5,7 @@ const config = require('./config')
 const getBook = function (data) {
   return $.ajax({
     url: config.apiOrigin + '/books/' + data.book.id,
-    method: 'GET',
-    data
+    method: 'GET'
   })
 }
 

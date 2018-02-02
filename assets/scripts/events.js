@@ -4,17 +4,17 @@ const ui = require('./ui')
 const getFormFields = require('../../lib/get-form-fields')
 
 const onGetBook = function (event) {
-  const data = getFormFields(event.target)
   event.preventDefault()
+  const data = getFormFields(event.target)
   api.getBook(data)
     .then(ui.showBooks)
-    .catch(console.log('error'))
+    .catch(error => { console.log(error) })
 }
 const onGetBooks = function (event) {
   event.preventDefault()
   api.getAllBooks()
     .then(ui.showBooks)
-    .catch(console.log('error'))
+    .catch(error => { console.log(error) })
 }
 
 const addHandlers = function (data) {

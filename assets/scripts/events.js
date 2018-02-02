@@ -10,7 +10,7 @@ const onGetBook = function (event) {
 }
 const onGetBooks = function (event) {
   event.preventDefault()
-  api.getBooks()
+  api.getAllBooks()
     .then(ui.showBooks)
     .catch(console.log('error'))
 }
